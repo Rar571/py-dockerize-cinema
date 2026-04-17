@@ -3,6 +3,5 @@
 __pycache__/
 *.pyc
 .idea
-docker-compose.yml
 media
 .pytest_cache/
