@@ -8,10 +8,11 @@ services:
        sh -c "python manage.py wait_for_db && python manage.py migrate &&
                  python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - ./:/app
       - media_data:/files/media
     depends_on:
       - db
+    ports:
+      - "8000:8000"
 
   db:
     image: postgres:16.0-alpine3.17
@@ -25,7 +26,7 @@ services:
     env_file:
       - .env
     volumes:
-      - db_data:$PG_DATA
+      - db_data:/var/lib/postgresql/data
 
 
 volumes:

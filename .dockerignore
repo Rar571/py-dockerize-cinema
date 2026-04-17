@@ -1,4 +1,8 @@
 .venv
-Dockerfile
+.env
+__pycache__/
+*.pyc
 .idea
-docker-compose.yaml
+docker-compose.yml
+media
+.pytest_cache/

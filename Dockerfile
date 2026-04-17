@@ -1,4 +1,4 @@
-FROM python:3.11.6-alpine3.18
+FROM python:3.11-slim
 
 LABEL maintainer="rarturus"
 
@@ -19,5 +19,3 @@ RUN adduser \
 
 RUN chown -R my_user /files/media
 RUN chmod -R 755 /files/media
-
-USER my_user
