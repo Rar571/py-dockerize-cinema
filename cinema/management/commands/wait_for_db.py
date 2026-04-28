@@ -4,9 +4,7 @@ from django.db import connections
 from django.db.utils import OperationalError
 
 
-class Command(BaseCommand):
-    help = "Wait for database to be available"
-
+class WaitForDbCommand(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Waiting for database...")
         while True:
